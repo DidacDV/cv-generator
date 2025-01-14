@@ -1,0 +1,116 @@
+.previewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+}
+
+.sectionTitle {
+    font-size: 1.5em;
+    border-bottom: 2px solid blue;
+    padding-right: 70%;
+}
+
+.personalInfoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1%;
+    width: 100%;
+}
+
+.personalInfoSpan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.briefIntroduction {
+    text-align: left;
+    width: 89%;
+    word-break: break-all;
+    white-space: normal;
+}
+
+.workExperienceContainer {
+    font-size: 0.7em;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 85%;
+}
+
+.experienceSubSection {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    list-style: none;
+    animation: fade-in 0.8s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 2;
+    }
+}
+
+.companyName {
+    color: #2563eb;
+    margin-bottom: 0.25rem;
+}
+
+.postionInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.postionInfo h3 {
+    color: #4b5563;
+    margin: 0;
+    font-size: 1.2rem;
+
+}
+
+.postionInfo span {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.experience {
+    text-align: left;
+    color: #374151;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    white-space: normal;
+    word-break: break-all;
+}
+
+.deleteExperienceButton {
+    background-color: #e11d48;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.deleteExperienceButton:hover {
+    background-color: #be123c;
+}

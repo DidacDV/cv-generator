@@ -1,0 +1,59 @@
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+}
+
+.generatorSectionTitle {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.toggled {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+    font-size: 25px;
+    margin-right: 60%;
+}
+
+.nonToggled {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    font-size: 25px;
+    margin-right: 60%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.toggledSection {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.nonToggledSection {
+    animation: fadeOut 0.3s ease forwards;
+}
