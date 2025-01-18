@@ -8,7 +8,8 @@
 .sectionTitle {
     font-size: 1.5em;
     border-bottom: 2px solid blue;
-    padding-right: 70%;
+    width: 85%;
+    margin-bottom: 1rem;
 }
 
 .personalInfoContainer {
@@ -40,7 +41,7 @@
     white-space: normal;
 }
 
-.workExperienceContainer {
+.workExperienceContainer, .educationContainer {
     font-size: 0.7em;
     padding: 1rem;
     background-color: #fff;
@@ -50,7 +51,7 @@
     width: 85%;
 }
 
-.experienceSubSection {
+.experienceSubSection, .educationSubSection {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid #eee;

@@ -1,5 +1,7 @@
 import InputSection from "./InputSection";
 import { useState } from "react";
+import "../styles/buttons.css";
+
 const WorkExperienceSection = ({ onExperienceChange }) => {
     const [values, setValues] = useState({
         companyName: "",
@@ -44,7 +46,7 @@ const WorkExperienceSection = ({ onExperienceChange }) => {
             <InputSection currentValue={values.startDate} sectionName="Start Date" placeHolder="Enter start date" onchange={(value) => handleInputChange("startDate", value)} recommended={true} type="date" isArea={false}/>
             <InputSection currentValue={values.endDate} sectionName="End Date" placeHolder="Enter end date" onchange={(value) => handleInputChange("endDate", value)} recommended={true} type="date" isArea={false}/>
             <InputSection currentValue={values.description} sectionName="Description" placeHolder="Enter description" onchange={(value) => handleInputChange("description", value)} recommended={false} type="text" isArea={true}/>
-            <button onClick={addNewExperience} className = "addExperienceButton">Add Experience</button>
+            <button onClick={addNewExperience} className = "addButton">Add Experience</button>
         </div>
     );
 }

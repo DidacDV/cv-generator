@@ -3,7 +3,7 @@ import PersonIcon from "../assets/personIcon";
 import PhoneIcon from "../assets/phoneIcon";
 import MailIcon from "../assets/mailIcon";
 
-const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperiences, deleteExperience}) => {
+const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperiences, deleteExperience, educations, deleteEducation}) => {
     return (
         <div className="previewContainer">
             <h1 className="sectionTitle">Personal Information</h1>
@@ -39,6 +39,24 @@ const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperie
                                 <p className="experience">{experience.description}</p>
                                 <button className = "deleteExperienceButton" onClick = {() => deleteExperience(index)}>Delete</button>
                             </li>
+                        )
+                    })}
+                </ul>
+            </div>
+            <h1 className="sectionTitle">Education</h1>
+            <div className = "educationContainer">
+                <ul>
+                    {educations.map((education, index) => {
+                        return (
+                        <li key = {index} className = "educationSubSection">
+                            <h2 className = "companyName">{education.institution}</h2>
+                            <div className = "postionInfo">
+                                <h3>{education.degree}</h3>
+                                <span>{education.startDate} - {education.endDate}</span>
+                            </div>
+                            <p className = "experience">{education.description}</p>
+                            <button className = "deleteExperienceButton" onClick = {() => deleteEducation(index)}>Delete</button>
+                        </li>
                         )
                     })}
                 </ul>
