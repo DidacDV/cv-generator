@@ -6,7 +6,7 @@ import MailIcon from "../assets/mailIcon";
 const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperiences, deleteExperience, educations, deleteEducation}) => {
     return (
         <div className="previewContainer">
-            <h1 className="sectionTitle">Personal Information</h1>
+            <h1 className="sectionTitle" id="firstTitle">Personal Information</h1>
             <div className = "personalInfoContainer">
                 <span className = "personalInfoSpan">
                     <PersonIcon/>

@@ -1,9 +1,0 @@
-fer llogica de skills (poderles afegir a cada work experience com una petita llista)
-
-fer llogica de poder guardar el CV com a PDF o WORD (mirar llibreries).
-        falta que al descarregar s'eliminin els botons de delete i s'arreglin els estils (es veu fatal)
-reestilitzar els espais per inroduir dades de work i personal info  
-reestilitzar el preview sencer
-
-!! -> escriure al meu doc com funciona be el proces de un estat i com es va passant la funció de canviar l'estat
-        cap a components més avall i com afecta -> es rerenderitza? 

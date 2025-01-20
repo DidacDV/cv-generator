@@ -17,8 +17,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
     width: 100%;
 }
 
@@ -44,7 +42,9 @@
 
 .workExperienceContainer, .educationContainer {
     font-size: 0.7em;
-    padding: 1rem;
+    padding: 0.2rem;
+    padding-left: 0;  
+    padding-bottom: 0;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -52,9 +52,15 @@
     width: 85%;
 }
 
+.workExperienceContainer ul, .educationContainer ul {
+    padding-left: 0;  
+    margin: 0;  
+}
+
 .experienceSubSection, .educationSubSection {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
+    padding-left: 0.6rem;  
     border-bottom: 1px solid #eee;
     list-style: none;
     animation: fade-in 0.8s;
@@ -62,7 +68,7 @@
 
 @keyframes fade-in {
     from {
-        opacity: 0;
+        opacity: 0.8;
     }
     to {
         opacity: 2;
@@ -115,4 +121,16 @@
 
 .deleteExperienceButton:hover {
     background-color: #be123c;
+}
+.print-ready * {
+    animation: none !important;
+    opacity: 1 !important;
+}
+
+.print-ready .deleteExperienceButton {
+    display: none !important;
+}
+
+.print-ready .previewContainer {
+    margin-left: 2%;
 }
