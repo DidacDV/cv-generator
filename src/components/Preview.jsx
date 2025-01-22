@@ -1,9 +1,10 @@
 import "../styles/preview.css"
+import "../styles/buttons.css"
 import PersonIcon from "../assets/personIcon";
 import PhoneIcon from "../assets/phoneIcon";
 import MailIcon from "../assets/mailIcon";
 
-const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperiences, deleteExperience, educations, deleteEducation}) => {
+const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperiences, deleteExperience, educations, deleteEducation, skills}) => {
     return (
         <div className="previewContainer">
             <h1 className="sectionTitle" id="firstTitle">Personal Information</h1>
@@ -37,7 +38,7 @@ const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperie
                                     <span>{experience.startDate} - {experience.endDate}</span>
                                 </div>
                                 <p className="experience">{experience.description}</p>
-                                <button className = "deleteExperienceButton" onClick = {() => deleteExperience(index)}>Delete</button>
+                                <button className = "deleteButton" onClick = {() => deleteExperience(index)}>Delete</button>
                             </li>
                         )
                     })}
@@ -55,12 +56,22 @@ const Preview = ({fullName, phoneNumber, contact, briefIntroduction, workExperie
                                 <span>{education.startDate} - {education.endDate}</span>
                             </div>
                             <p className = "experience">{education.description}</p>
-                            <button className = "deleteExperienceButton" onClick = {() => deleteEducation(index)}>Delete</button>
+                            <button className = "deleteButton" onClick = {() => deleteEducation(index)}>Delete</button>
                         </li>
                         )
                     })}
                 </ul>
             </div>
+            <h1 className = "sectionTitle">Skills</h1>
+            <ul className = "skillsContainer">
+                    {skills.map((skill,index) => {
+                        return (
+                            <li key = {index} className="skillItem">
+                                <span className="skillName">{skill.name}</span> - {skill.rating} / 5
+                            </li>
+                        )
+                    })}
+            </ul>
         </div>
     )
 }

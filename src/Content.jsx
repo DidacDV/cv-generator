@@ -4,6 +4,7 @@ import './styles/content.css'
 import PersonalInfoSection from './components/PersonalInfoSection';
 import WorkExperienceSection from './components/WorkExperienceSection';
 import EducationSection from './components/educationSection';
+import SkillsSection from './components/SkillsSection';
 import Preview from './components/Preview';
 import ToggleSection from './components/ToggleSection';
 
@@ -14,6 +15,7 @@ const Content = () => {
     const [introduction, setIntroduction] = useState("");
     const [workExperiences, setWorkExperiences] = useState([]); //array containing each work experience -> objects
     const [educations, setEducations] = useState([]); //array containing each education -> objects
+    const [skills, setSkills] = useState([]); //array containing each skill -> objects
 
     const handleEducationChange = (education) => {
         const newEducations = [...educations];
@@ -44,6 +46,25 @@ const Content = () => {
         }
     }
 
+    const handleSkillChange = (skillName) => {
+        const newSkills = [...skills];
+        newSkills.push({name: skillName, rating: 1});
+        setSkills(newSkills);
+    }
+
+    const handleRemoveSkill = (index) => {
+        if (index !== null) {
+            const newSkills = [...skills];
+            newSkills.splice(index, 1);
+            setSkills(newSkills);
+        }
+    }
+
+    const handleSkillRatingChange = (index, newRating) => {
+        const updated = [...skills];
+        updated[index].rating = newRating;
+        setSkills(updated);
+    }
 
     return (
         <main className="mainContent">
@@ -58,8 +79,17 @@ const Content = () => {
                 <ToggleSection title={"Work Experience"}>
                     <WorkExperienceSection onExperienceChange={handleExperienceChange}/>
                 </ToggleSection>
+
                 <ToggleSection title = {"Education"}>
                     <EducationSection onEducationChange={handleEducationChange} ></EducationSection>
+                </ToggleSection>
+            
+                <ToggleSection title = {"Skills"}>
+                    <SkillsSection          skills={skills}
+                                            onRatingChange={handleSkillRatingChange}
+                                            onAddSkill ={handleSkillChange}
+                                            onRemoveSkill ={handleRemoveSkill}/>
+
                 </ToggleSection>
             </div>
             <div className = "preview">
@@ -71,7 +101,8 @@ const Content = () => {
                             workExperiences = {workExperiences}
                             deleteExperience={handleRemoveExperience}
                             educations={educations}
-                            deleteEducation={handleRemoveExperience}
+                            deleteEducation={handleRemoveEducation}
+                            skills={skills}
                             />
             </div>
         </main>

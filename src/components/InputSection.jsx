@@ -1,3 +1,4 @@
+//input component for each section of the application
 import '../styles/inputSection.css';
 
 const InputSection = ({sectionName, placeHolder, onchange, recommended, type, isArea, currentValue}) => {
